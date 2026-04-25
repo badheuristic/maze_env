@@ -184,7 +184,7 @@ Expected SARSA collapses on Task 3: Med-10 = 18, Var-10 = 516.69. The expected v
 
 for example how would i edit this{
 
-  description = "Python data science environment";
+  description = "rl model evaluation environment";
 
 
   inputs = {
@@ -227,7 +227,7 @@ for example how would i edit this{
 
         shellHook = ''
 
-          echo "Data science environment loaded."
+          echo "environment loaded."
 
           python --version
 

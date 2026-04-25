@@ -8,7 +8,7 @@ A 10×10 maze where an agent learns to navigate from a fixed start to a goal whi
 
 **Algorithms:** Q-Learning, SARSA, Expected SARSA, TD(λ) with eligibility traces
 
-**Key finding:** TD(λ) achieves the best convergence on complex maps (Med-10 = 36-36.5, Var-10 < 2 on Tasks 2-3). Q-Learning degrades sharply on pit-dense maps due to off-policy recklessness. See [report.md](report.md) for full analysis.
+**Key finding:** TD(λ) achieves the best convergence on complex maps (Med-10 = 36-36.5, Var-10 < 2 on Tasks 2-3). Q-Learning degrades sharply on pit-dense maps due to off-policy recklessness. See [report.md](REPORT.md) for full analysis.
 
 **Reward structure:**
 - Goal reached: +50

@@ -104,13 +104,13 @@ At episode end, all traces are reset to zero to prevent inter-episode credit lea
 
 ## Results Analysis
 
-### Task 1 (simple map — 9 walls, 3 pits)
+### Task 1 (simple map - 9 walls, 3 pits)
 
 All four algorithms converge to near-optimal policies. The maximum achievable reward is 41 (9 steps, no pits), which every algorithm achieves in its best episode.
 
 Q-Learning and SARSA reach Med-10 = 41 with low variance (< 2), indicating reliable policy execution by episode 1500. Expected SARSA also achieves Med-10 = 41 but with slightly higher variance (6.56), likely because its expected-value target produces smaller TD errors early in training, slowing the rate at which Q-values for good actions separate from those for poor actions. TD(λ) achieves Med-10 = 40 with the highest variance (7.40) on this task, as trace broadcasts can occasionally reinforce suboptimal paths when the agent re-explores a previously visited corridor.
 
-### Task 2 (pit-heavy map — 10 pits)
+### Task 2 (pit-heavy map - 10 pits)
 
 This is where the algorithms diverge significantly. TD(λ) achieves **Med-10 = 36, Var-10 = 36.4**, the best of all algorithms by a large margin. The eligibility trace mechanism is directly responsible: the first time the agent successfully navigates a pit corridor, every step of that trajectory is immediately reinforced. One-step methods must propagate this corridor value backwards over many future episodes.
 
@@ -118,13 +118,361 @@ Q-Learning drops sharply to Med-10 = 20 with extremely high variance (590.76). T
 
 SARSA (Med-10 = 28) and Expected SARSA (Med-10 = 30) perform better than Q-Learning due to their on-policy updates encoding caution near pits. Unexpectedly, Expected SARSA outperforms SARSA on Task 2 despite SARSA being more commonly cited as "safer."
 
-### Task 3 (diagonal wall barrier — 6 pits)
+### Task 3 (diagonal wall barrier - 6 pits)
 
 TD(λ) achieves its most dramatic advantage: **Med-10 = 36.5, Var-10 = 1.89**, nearly perfect convergence on the hardest task.
 
 Task 3 features a diagonal wall forcing navigation through a narrow corridor (columns 3–4, rows 2–4). This is precisely the scenario where eligibility traces provide maximum value: the corridor must be traversed early in the episode, and credit must propagate backwards through several steps to reinforce it. One-step methods require many more episodes to propagate the corridor's value to its entry.
 
-Expected SARSA collapses on Task 3: Med-10 = 18, Var-10 = 516.69. The expected value's averaging over the action distribution reduces the magnitude of Q-value updates at the corridor entry — the uniform component `(ε/|A|)·Σ Q(s',a')` includes low-value actions that lead into walls and pits, pulling the TD target δ downward and slowing the rate at which the corridor entry's Q-value separates from surrounding states. This is the same averaging property that reduces variance on simple maps, but here it delays convergence precisely where a large, decisive update is needed.
+Expected SARSA collapses on Task 3: Med-10 = 18, Var-10 = 516.69. The expected value's averaging over the action distribution reduces the magnitude of Q-value updates at the corridor entry {
+
+  description = "Python data science environment";
+
+
+  inputs = {
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+  };
+
+
+  outputs = { self, nixpkgs }:
+
+    let
+
+      system = "x86_64-linux"; # Adjust to "aarch64-darwin", etc., as required
+
+      pkgs = nixpkgs.legacyPackages.${system};
+
+    in
+
+    {
+
+      devShells.${system}.default = pkgs.mkShell {
+
+        buildInputs = [
+
+          (pkgs.python3.withPackages (ps: with ps; [
+
+            numpy
+
+            matplotlib
+
+            pandas
+
+            ipython
+
+          ]))
+
+        ];
+
+
+        shellHook = ''
+
+          echo "Data science environment loaded."
+
+          python --version
+
+        '';
+
+      };
+
+    };
+
+}
+
+
+for example how would i edit this{
+
+  description = "Python data science environment";
+
+
+  inputs = {
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+  };
+
+
+  outputs = { self, nixpkgs }:
+
+    let
+
+      system = "x86_64-linux"; # Adjust to "aarch64-darwin", etc., as required
+
+      pkgs = nixpkgs.legacyPackages.${system};
+
+    in
+
+    {
+
+      devShells.${system}.default = pkgs.mkShell {
+
+        buildInputs = [
+
+          (pkgs.python3.withPackages (ps: with ps; [
+
+            numpy
+
+            matplotlib
+
+            pandas
+
+            ipython
+
+          ]))
+
+        ];
+
+
+        shellHook = ''
+
+          echo "Data science environment loaded."
+
+          python --version
+
+        '';
+
+      };
+
+    };
+
+}
+
+
+for example how would i edit this{
+
+  description = "Python data science environment";
+
+
+  inputs = {
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+  };
+
+
+  outputs = { self, nixpkgs }:
+
+    let
+
+      system = "x86_64-linux"; # Adjust to "aarch64-darwin", etc., as required
+
+      pkgs = nixpkgs.legacyPackages.${system};
+
+    in
+
+    {
+
+      devShells.${system}.default = pkgs.mkShell {
+
+        buildInputs = [
+
+          (pkgs.python3.withPackages (ps: with ps; [
+
+            numpy
+
+            matplotlib
+
+            pandas
+
+            ipython
+
+          ]))
+
+        ];
+
+
+        shellHook = ''
+
+          echo "Data science environment loaded."
+
+          python --version
+
+        '';
+
+      };
+
+    };
+
+}
+
+
+for example how would i edit this{
+
+  description = "Python data science environment";
+
+
+  inputs = {
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+  };
+
+
+  outputs = { self, nixpkgs }:
+
+    let
+
+      system = "x86_64-linux"; # Adjust to "aarch64-darwin", etc., as required
+
+      pkgs = nixpkgs.legacyPackages.${system};
+
+    in
+
+    {
+
+      devShells.${system}.default = pkgs.mkShell {
+
+        buildInputs = [
+
+          (pkgs.python3.withPackages (ps: with ps; [
+
+            numpy
+
+            matplotlib
+
+            pandas
+
+            ipython
+
+          ]))
+
+        ];
+
+
+        shellHook = ''
+
+          echo "Data science environment loaded."
+
+          python --version
+
+        '';
+
+      };
+
+    };
+
+}
+
+
+for example how would i edit this{
+
+  description = "Python data science environment";
+
+
+  inputs = {
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+  };
+
+
+  outputs = { self, nixpkgs }:
+
+    let
+
+      system = "x86_64-linux"; # Adjust to "aarch64-darwin", etc., as required
+
+      pkgs = nixpkgs.legacyPackages.${system};
+
+    in
+
+    {
+
+      devShells.${system}.default = pkgs.mkShell {
+
+        buildInputs = [
+
+          (pkgs.python3.withPackages (ps: with ps; [
+
+            numpy
+
+            matplotlib
+
+            pandas
+
+            ipython
+
+          ]))
+
+        ];
+
+
+        shellHook = ''
+
+          echo "Data science environment loaded."
+
+          python --version
+
+        '';
+
+      };
+
+    };
+
+}
+
+
+for example how would i edit this{
+
+  description = "Python data science environment";
+
+
+  inputs = {
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+  };
+
+
+  outputs = { self, nixpkgs }:
+
+    let
+
+      system = "x86_64-linux"; # Adjust to "aarch64-darwin", etc., as required
+
+      pkgs = nixpkgs.legacyPackages.${system};
+
+    in
+
+    {
+
+      devShells.${system}.default = pkgs.mkShell {
+
+        buildInputs = [
+
+          (pkgs.python3.withPackages (ps: with ps; [
+
+            numpy
+
+            matplotlib
+
+            pandas
+
+            ipython
+
+          ]))
+
+        ];
+
+
+        shellHook = ''
+
+          echo "Data science environment loaded."
+
+          python --version
+
+        '';
+
+      };
+
+    };
+
+}
+
+
+for example how would i edit this the uniform component `(ε/|A|)·Σ Q(s',a')` includes low-value actions that lead into walls and pits, pulling the TD target δ downward and slowing the rate at which the corridor entry's Q-value separates from surrounding states. This is the same averaging property that reduces variance on simple maps, but here it delays convergence precisely where a large, decisive update is needed.
 
 SARSA shows high variance (415.49). The diagonal wall creates two distinct solution regions; ε-exploration intermittently sends the agent between them even after partial convergence.
 
@@ -186,13 +534,13 @@ RL finds paths approximately 33–63% longer than the search-optimal solution.
 
 **Sample efficiency.** A* explores 33–56 unique states to find the solution. RL agents visit states millions of times over 1500 episodes. Search is orders of magnitude more efficient for known, static environments.
 
-**Prior knowledge requirement.** A* and UCS require a complete model: the transition function, all states, and step costs. RL requires only reward signals from direct interaction — no map is needed.
+**Prior knowledge requirement.** A* and UCS require a complete model: the transition function, all states, and step costs. RL requires only reward signals from direct interaction, no map is needed.
 
 **Policy coverage.** Search returns a single path from the start state. RL produces a complete policy π(s) over every state in the maze. If the agent is displaced mid-episode (stochastic transition, noisy actuation), the RL policy handles it; a search path cannot.
 
 **Stochastic environments.** A* and UCS assume deterministic transitions. RL handles stochastic dynamics naturally. For this static, deterministic maze the distinction does not apply, which is precisely why search outperforms RL on raw path quality.
 
-**Observation on Task 3:** BFS finds the same path cost as UCS and A* (8.2). This means the optimal path contains no pits — BFS's cost-agnostic search happens to find the optimal-cost path because the shortest-hop path is also the cheapest. This is consistent with RL agents' best episodes also being pit-free (reward = 37 = 50 − 13, no −10 pit penalties).
+**Observation on Task 3:** BFS finds the same path cost as UCS and A* (8.2). This means the optimal path contains no pits. BFS's cost-agnostic search happens to find the optimal-cost path because the shortest-hop path is also the cheapest. This is consistent with RL agents' best episodes also being pit-free (reward = 37 = 50 − 13, no −10 pit penalties).
 
 ---
 
@@ -202,4 +550,4 @@ TD(λ) is the most effective algorithm on complex maps due to its multi-step cre
 
 Q-Learning performs well on simple maps but degrades under dense pit configurations due to its off-policy recklessness. SARSA offers a stable, cautious baseline. Expected SARSA provides the lowest variance on simple maps but fails to converge reliably on Task 3 because its averaged TD target slows the rate at which Q-values separate near critical narrow passages.
 
-Compared to classical search (A*, UCS), RL requires substantially more computation and finds suboptimal paths (33–63% longer than optimal). However, RL operates without a world model and produces a complete policy over all states — properties essential in real-world environments where a precomputed map is unavailable or the environment is non-stationary.
+Compared to classical search (A*, UCS), RL requires substantially more computation and finds suboptimal paths (33–63% longer than optimal). However, RL operates without a world model and produces a complete policy over all states, properties essential in real-world environments where a precomputed map is unavailable or the environment is non-stationary.

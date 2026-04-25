@@ -1,0 +1,1 @@
+[SARSA on T 1] : SARSA : max-rew=41.000 med-10=39.000 var-10=3.210 max-episode-len=552.0 LR0.01_gamma0.9_eps0.1

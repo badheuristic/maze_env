@@ -1,0 +1,16 @@
+# validated metrics — seed=42, episodes=1500, alpha=0.01, gamma=0.9, epsilon=0.1
+
+ALG              TASK  MAX-REW   MED-10     VAR-10   MED-LAST10
+-----------------------------------------------------------------
+QLearning           1     41.0     41.0       1.64         41.0
+SARSA               1     41.0     41.0       1.80         41.0
+ExpSARSA            1     41.0     41.0       6.56         41.0
+TDLambda            1     41.0     40.0       7.40         40.0
+QLearning           2     38.0     20.0     590.76         20.0
+SARSA               2     38.0     28.0      80.09         28.0
+ExpSARSA            2     38.0     30.0     379.60         30.0
+TDLambda            2     38.0     36.0      36.40         36.0
+QLearning           3     37.0     32.5     243.44         32.5
+SARSA               3     37.0     28.5     415.49         28.5
+ExpSARSA            3     37.0     18.0     516.69         18.0
+TDLambda            3     37.0     36.5       1.89         36.5

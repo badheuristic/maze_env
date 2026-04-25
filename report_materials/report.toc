@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Algorithm Definitions and Implementation}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Q-Learning}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}SARSA}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Expected SARSA}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}TD($\lambda $) with Eligibility Traces}{3}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Changes to Provided Files}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}run\_main.py}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}maze\_env.py}{3}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Quantitative Results}{3}{section.4}%
+\contentsline {section}{\numberline {5}Results Analysis}{4}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Task 1 (simple map -- 8 walls, 3 pits)}{4}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Task 2 (pit-heavy map -- 10 pits)}{5}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Task 3 (diagonal wall barrier -- 6 pits)}{5}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Computation Time}{6}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Qualitative Observations}{6}{section.6}%
+\contentsline {section}{\numberline {7}Comparison to Search Algorithms (Tasks 2 and 3)}{6}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Key Differences}{7}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Observation: BFS on task325}{8}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Conclusion}{8}{section.8}%
+\contentsline {section}{\numberline {9}GitLab Repo}{9}{section.9}%

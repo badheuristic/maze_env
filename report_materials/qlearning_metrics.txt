@@ -1,0 +1,3 @@
+[QLearning on T 1] : QLearning : max-rew=41.000 med-10=39.000 var-10=2.760 max-episode-len=420.0 LR0.01_gamma0.9_eps0.1
+[QLearning on T 2] : QLearning : max-rew=38.000 med-10=20.500 var-10=521.360 max-episode-len=388.0 LR0.01_gamma0.9_eps0.1
+[QLearning on T 3] : QLearning : max-rew=37.000 med-10=28.500 var-10=723.840 max-episode-len=485.0 LR0.01_gamma0.9_eps0.1

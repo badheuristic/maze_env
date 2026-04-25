@@ -8,13 +8,13 @@ A 10×10 maze where an agent learns to navigate from a fixed start to a goal whi
 
 **Algorithms:** Q-Learning, SARSA, Expected SARSA, TD(λ) with eligibility traces
 
-**Key finding:** TD(λ) achieves the best convergence on complex maps (Med-10 = 36–36.5, Var-10 < 2 on Tasks 2–3). Q-Learning degrades sharply on pit-dense maps due to off-policy recklessness. See [report.md](report.md) for full analysis.
+**Key finding:** TD(λ) achieves the best convergence on complex maps (Med-10 = 36-36.5, Var-10 < 2 on Tasks 2-3). Q-Learning degrades sharply on pit-dense maps due to off-policy recklessness. See [REPORT.md](REPORT.md) for full analysis.
 
 **Reward structure:**
 - Goal reached: +50
-- Wall collision: −3 (agent reverts)
-- Pit: −10 (terminal)
-- Each step: −1
+- Wall collision: -3 (agent reverts)
+- Pit: -10 (terminal)
+- Each step: -1
 
 ## Included Algorithms
 
@@ -46,7 +46,7 @@ Performance after 1500 episodes (α=0.01, γ=0.9, ε=0.1). **Med-10** = median r
 | Expected SARSA | 41.0 | 30.0 | 18.0 | 516.7 |
 | **TD(λ)** | **40.0** | **36.0** | **36.5** | **1.9** |
 
-All algorithms reach max reward 41 (Task 1), 38 (Task 2), 37 (Task 3). TD(λ) dominates on Tasks 2–3.
+All algorithms reach max reward 41 (Task 1), 38 (Task 2), 37 (Task 3). TD(λ) dominates on Tasks 2-3.
 
 ## Setup
 
